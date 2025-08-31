@@ -84,7 +84,7 @@ app.get('/', async (req, res) => {
     
     res.render('index', { 
         title: 'ism魂',
-        descripiton: '日常の出来事や散歩日記なんか書いてくブログ',
+        description: '日常の出来事や散歩日記なんか書いてくブログ',
         posts: posts,
         pagination: {
             currentPage: page,
