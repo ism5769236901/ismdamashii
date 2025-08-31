@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    
+        <header>
+            <h1 class="site-title"><a href="/">
+                    <img src="/static/logo.png" alt="ism魂" class="site-logo">
+                </a></h1>
+            <p>日常の出来事や散歩日記なんか書いてくブログ</p>
+        </header>
+    <div class="container">    
+        <main>
+            <article class="post">
+                <header class="post-header">
+                    <h1 class="post-title"><%= post.title %></h1>
+                    <div class="post-meta">
+                        <time datetime="<%= post.date %>">
+                            <%= new Date(post.date).toLocaleDateString('ja-JP') %>
+                        </time>
+                    </div>
+                </header>
+                
+                <div class="post-content">
+                    <%- post.htmlContent %>
+                </div>
+                
+                <footer class="post-footer">
+                    <div class="back-to-home">
+                        <a href="/">&larr; ホームに戻る</a>
+                    </div>
+                </footer>
+            </article>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 ism魂</p>
+        </footer>
+    </div>
+</body>
+</html>
